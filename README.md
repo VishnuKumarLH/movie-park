@@ -65,7 +65,7 @@ Built entirely with **HTML, CSS, and JavaScript (Vanilla JS)** — making it beg
 
 🔍 **Search Results Example**  
  
-![Results](screenshots.png)
+![Results](screenshot.png)
 
 ---
 
@@ -92,3 +92,4 @@ You can host this project for **free** using **GitHub Pages**:
    ```
    https://your-username.github.io/movie-search-app/
    ```
+
