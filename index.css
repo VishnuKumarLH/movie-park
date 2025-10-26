@@ -1,96 +1,97 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 :root{
-    --md-dark-color: #1d1d1d;
-    --dark-color: #171717;
-    --light-dark-color: #292929;
-    --yellow-color: #d4aa11;
+    --primary-color: #C1121F;
+    --secondary-color: #FDF0D5;
 }
+
 *{
     padding: 0;
     margin: 0;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
 }
+
 body{
     font-family: 'Inter', sans-serif;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
 }
+
 a{
     text-decoration: none;
+    color: var(--secondary-color);
 }
+
 img{
     width: 100%;
     display: block;
 }
+
 .wrapper{
     min-height: 150vh;
-    background-color: var(--dark-color);
+    background-color: var(--primary-color);
 }
+
 .wrapper .container{
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
 }
+
+/* Search section */
 .search-container{
-    background-color: var(--md-dark-color);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
     height: 180px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    align-items: center;
+    justify-content: center;
 }
+
 .logo{
     padding: 1rem 0;
-    border-bottom: 1px solid var(--light-dark-color);
+    border-bottom: 1px solid var(--secondary-color);
+    text-align: center;
 }
+
 .logo p{
     font-size: 2rem;
-    color: #fff;
+    color: var(--secondary-color);
     font-weight: bold;
 }
+
 .logo p span{
-    color: var(--yellow-color);
+    color: var(--primary-color);
 }
+
 .search-element{
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    flex-direction: column;
     position: relative;
 }
+
 .search-element h3{
-    -ms-flex-item-align: center;
-        align-self: center;
+    align-self: center;
     margin-right: 1rem;
     font-size: 2rem;
-    color: #fff;
+    color: var(--secondary-color);
     font-weight: 500;
     margin-bottom: 1.5rem;
 }
+
 .search-element .form-control{
     padding: 1rem 2rem;
     font-size: 1.4rem;
-    border: none;
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 3px;
     outline: none;
-    color: var(--light-dark-color);
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
     width: 350px;
 }
+
 .search-list{
     position: absolute;
     right: 0;
@@ -98,101 +99,98 @@ img{
     max-height: 500px;
     overflow-y: scroll;
     z-index: 10;
+    background-color: var(--secondary-color);
 }
+
 .search-list .search-list-item{
-    background-color: var(--light-dark-color);
+    background-color: var(--secondary-color);
     padding: 0.5rem;
-    border-bottom: 1px solid var(--dark-color);
+    border-bottom: 1px solid var(--primary-color);
     width: calc(350px - 8px);
-    color: #fff;
+    color: var(--primary-color);
     cursor: pointer;
-    -webkit-transition: background-color 200ms ease;
-    -o-transition: background-color 200ms ease;
     transition: background-color 200ms ease;
 }
-.search-list .search-list-item:Hover{
-    background-color: #1f1f1f;
+
+.search-list .search-list-item:hover{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
 }
+
 .search-list-item{
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
 }
+
 .search-item-thumbnail img{
     width: 40px;
     margin-right: 1rem;
 }
+
 .search-item-info h3{
     font-weight: 600;
     font-size: 1rem;
 }
+
 .search-item-info p{
     font-size: 0.8rem;
     margin-top: 0.5rem;
     font-weight: 600;
-    opacity: 0.6;
+    opacity: 0.8;
 }
 
-/* thumbnail */
+/* Scrollbar */
 .search-list::-webkit-scrollbar{
     width: 8px;
 }
 .search-list::-webkit-scrollbar-track{
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-            box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 6px var(--primary-color);
 }
 .search-list::-webkit-scrollbar-thumb{
-    background-color: var(--yellow-color);
-    outline: none;
+    background-color: var(--primary-color);
     border-radius: 10px;
 }
 
-/* js related class */
+/* JS related class */
 .hide-search-list{
     display: none;
 }
 
-/* movie result */
+/* Movie result section */
 .result-container{
     padding: 3rem 0;
 }
+
 .movie-poster img{
     max-width: 300px;
     margin: 0 auto;
-    border: 4px solid #fff;
+    border: 4px solid var(--secondary-color);
 }
+
 .movie-info{
     text-align: center;
-    color: #fff;
+    color: var(--secondary-color);
     padding-top: 3rem;
 }
 
-/* movie info stylings */
+/* Movie info stylings */
 .movie-title{
     font-size: 2rem;
-    color: var(--yellow-color);
+    color: var(--secondary-color);
 }
 .movie-misc-info{
     list-style-type: none;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    align-items: center;
+    justify-content: center;
     padding: 1rem;
 }
 .movie-info .year{
     font-weight: 500;
 }
 .movie-info .rated{
-    background-color: var(--yellow-color);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
     padding: 0.4rem;
     margin: 0 0.4rem;
     border-radius: 3px;
@@ -207,7 +205,8 @@ img{
     margin: 1rem 0;
 }
 .movie-info .genre{
-    background-color: var(--light-dark-color);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
     display: inline-block;
     padding: 0.5rem;
     border-radius: 3px;
@@ -217,7 +216,7 @@ img{
     margin: 1rem auto;
 }
 .movie-info .language{
-    color: var(--yellow-color);
+    color: var(--secondary-color);
     font-style: italic;
 }
 .movie-info .awards{
@@ -225,10 +224,11 @@ img{
     font-size: 0.9rem;
 }
 .movie-info .awards i{
-    color: var(--yellow-color);
+    color: var(--secondary-color);
     margin: 1rem 0.7rem 0 0;
 }
 
+/* Responsive */
 @media(max-width: 450px){
     .logo p{
         font-size: 1.4rem;
@@ -244,18 +244,13 @@ img{
     .search-list{
         width: 90%;
         right: 50%;
-        -webkit-transform: translateX(50%);
-            -ms-transform: translateX(50%);
-                transform: translateX(50%);
+        transform: translateX(50%);
     }
     .search-list .search-list-item{
         width: 100%;
     }
     .movie-misc-info{
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
+        flex-direction: column;
     }
     .movie-misc-info li:nth-child(2){
         margin: 0.8rem 0;
@@ -264,10 +259,7 @@ img{
 
 @media(min-width: 800px){
     .search-element{
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-                flex-direction: row;
+        flex-direction: row;
     }
     .search-element h3{
         margin-bottom: 0;
@@ -281,9 +273,7 @@ img{
         padding-top: 0;
     }
     .movie-info .movie-misc-info{
-        -webkit-box-pack: start;
-            -ms-flex-pack: start;
-                justify-content: flex-start;
+        justify-content: flex-start;
         padding-left: 0;
     }
     .movie-info .plot{
